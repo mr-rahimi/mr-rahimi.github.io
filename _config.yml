@@ -1,32 +1,30 @@
 # Site
-repository: sproogen/resume-theme
+repository: https://mr-rahimi.github.io
 # favicon: images/favicon.ico
 
 # Personal info
-name: Brett Harris
-title: Senior Network System Administrator
-email: brett.h@email.co.uk
-website: www.github.com/sproogen/resume-theme
+name: Mohammad Reza Rahimi
+title: Full-Stack .NET Developer
+email: mr_rahimi@live.com
+website: https://mr-rahimi.github.io
 
 # Social links
-twitter_username: facespics
-github_username:  sproogen
+github_username:  mr-rahimi
 # dribbble_username: jekyll
 # facebook_username: jekyll
 # flickr_username: jekyll
-instagram_username: chillwildlife
-linkedin_username: jameswgrant
+#instagram_username: chillwildlife
+linkedin_username: mrrahimi
 # pinterest_username: jekyll
-youtube_username: globalmtb
+#youtube_username: globalmtb
 # googleplus_username: +jekyll
 
 # About Section
 # about_title: About Me
 about_profile_image: images/profile.jpg
-about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Brett and I'm a senior network system administrator. As well as administrating systems I also have experience making software and web apps. I have worked at a number of companies gaining teamwork and leadership skills.
-
-  I am most skilled in: <mark>AWS</mark> and <mark>Eating Pizza</mark>
+about_content: | # Software Developer with several years of experience as .NET, ASP.NET and Front-end developer.
+I have been working since 2009 as a Software Developer. I am passionate about do my task in the best way and in reasonable time.
+I would not hesitate to learn new technology if I am sure that it helps me to do my tasks in better manner.  
 
 # Projects Section
 # projects_title: Projects
