@@ -1,58 +1,55 @@
-# Site
-repository: https://mr-rahimi.github.io
-# favicon: images/favicon.ico
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 
-# Personal info
-name: Mohammad Reza Rahimi
-title: Full-Stack .NET Developer
+title: Mohammad Reza Rahimi
 email: mr_rahimi@live.com
-website: https://mr-rahimi.github.io
-
-# Social links
+description: >- # this means to ignore newlines until "baseurl:"
+  Software Engineer 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: jekyllrb
 github_username:  mr-rahimi
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-#instagram_username: chillwildlife
-linkedin_username: mrrahimi
-# pinterest_username: jekyll
-#youtube_username: globalmtb
-# googleplus_username: +jekyll
 
-# About Section
-# about_title: About Me
-about_profile_image: images/profile.jpg
-about_content: | # Software Developer with several years of experience as .NET, ASP.NET and Front-end developer.
-I have been working since 2009 as a Software Developer. I am passionate about do my task in the best way and in reasonable time.
-I would not hesitate to learn new technology if I am sure that it helps me to do my tasks in better manner.  
-
-# Projects Section
-# projects_title: Projects
-
-# Experience Section
-# experience_title: Experience
-
-# Education Section
-# educaton_title: Education
-
-# More Section
-# more_title: A Little More About Me
-more_content: | # this will include new lines to allow paragraphs
-  Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-   - Rock climbing
-   - Gaming
-   - Knitting
-   - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
-
-# Footer
-footer_show_references: true
 
 # Build settings
-remote_theme: sproogen/resume-theme
-
-sass:
-  sass_dir: _sass
-  style: compressed
-
+theme: minima
 plugins:
- - jekyll-seo-tag
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+gem: [jekyll-admin]

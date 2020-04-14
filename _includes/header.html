@@ -1,0 +1,28 @@
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.data.menu_items | default: default_paths -%}
+<nav class="bg-secondary">
+  <div class="container">
+    <button class=" toggle float-left">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </button>
+    <a href="{{ "/" | relative_url }}" class="navigation-brand float-left">{{ site.title | escape }}<img src="" alt=""></a>
+    <ul class="navigation-list list-unstyled float-right">
+      {%- if page_paths -%}
+
+      {%- for path in page_paths -%}
+      {%- assign my_page = site.pages | where: "path", path | first -%}
+      {%- if my_page.title -%}
+      <li><a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+      {%- endif -%}
+      {%- endfor -%}
+
+      {%- endif -%}
+    </ul>
+
+    <div class="overlay">
+    </div>
+  </div>
+</nav>
+
