@@ -1,36 +1,62 @@
 ---
 layout: default
 ---
-
-<div class="home card p-md-4">
-  {%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-  <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts List" }}</h2> -->
-  <ul class="post-list">
-    {%- for post in site.posts -%}
-    <li>
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <div class="alert alert-primary">
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
+<div class="row py-3">
+  <div class="col-lg-3 col-md-4 d-none d-md-block" id="sticky-sidebar">
+    <div class="sticky-top">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{site.data.contactInfo.full_name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{site.data.contactInfo.career}}</h6>
+          <p class="card-text">{{site.data.contactInfo.description}}</p>
+          <a href="#" class="link d-block" style="word-break: break-all;">
+            <i class="fa fa-envelope"></i>
+            {{site.data.contactInfo.email_address}}
           </a>
-        </h3>
+          <a href="#" class="link d-block" style="word-break: break-all;">
+            <i class="fab fa-github"></i>
+            {{site.data.contactInfo.github_page}}
+          </a>
+          <a href="#" class="link d-block" style="word-break: break-all;">
+            <i class="fab fa-linkedin"></i>
+            {{site.data.contactInfo.linkedin_page}}
+          </a>
+        </div>
       </div>
-      {%- if site.show_excerpts -%}
-      {{ post.excerpt }}
+    </div>
+  </div>
+  <div class="col" id="main">
+    <div class="home card p-4">
+      {%- if page.title -%}
+      <h1 class="page-heading">{{ page.title }}</h1>
       {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
 
-  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
-  {%- endif -%}
+      {{ content }}
 
+      {%- if site.posts.size > 0 -%}
+      <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts List" }}</h2> -->
+      <ul class="post-list mb-0">
+        {%- for post in site.posts -%}
+        <li class="mb-0">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <div class="alert alert-primary">
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+          </div>
+          {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+
+      <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
+      {%- endif -%}
+
+    </div>
+  </div>
 </div>
