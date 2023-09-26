@@ -1,0 +1,13 @@
+{
+  "title": "projects",
+  "type": "object",
+  "properties": {
+    "country": {
+      "required": false,
+      "description": "country",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "country"
+    }
+  }
+}
