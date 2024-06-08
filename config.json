@@ -1,0 +1,14 @@
+{
+  "copyToOutput": [
+    "images/*.*"
+  ],
+  "outputPath":"docs",
+  "modules": [
+    {
+      "id": "2e6f2715-06bf-42d2-9026-b1791a37cfee",
+      "name": "Blog",
+      "version": "0.0.1",
+      "hash": "B68F4EBDE74430DCDB014989CCA7DC35A817249B4100F2F910E65BA804F3E64D"
+    }
+  ]
+}
