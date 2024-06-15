@@ -83,71 +83,25 @@
     </header>
 
     <div b-03d6ragzky class="main-wrapper" id="app">
-        
-<section class="cta-section theme-bg-light py-5">
+        <section class="cta-section theme-bg-light py-5">
     <div class="container text-center">
-        <h2 class="heading">My Perspective</h2>
-        <div class="intro">&quot;If you can&#x27;t explain it simply, you don&#x27;t understand it well enough.&quot; - Albert Einstein</div>
+        <h2 class="heading">About Me</h2>
+        <div class="intro">Who am I...</div>
     </div><!--//container-->
 </section>
-<section class="blog-list px-3 py-5 p-md-5">
-    <div class="container">
-            <div class="item mb-5">
-                <div class="media">
-                    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="/images/reorder-list.png" alt="image">
-                    <div class="media-body">
-                        <h3 class="title mb-1"><a href="/post/user-defined-ordered-list">User defined ordered list</a></h3>
+<article class="about-section py-5">
+	<div class="container">
+        <div class="markdown">
+            <h5>I am...</h5>
+<p>I am a Full-Stack Developer since 2009 with too many experiences in all stages of building desktop, web, and mobile applications all large, middle, and small scale applications. writing simple, organized, and extendable code are the most important pillars in my coding. I believe that the application which is developed by me like my children must be tidy, ordered, and healthy.</p>
+<h5>My strongest skills and how I learned them...</h5>
+<p>I have a solid knowledge of C# and javascript languages. I have used SQL Server, ASP.NET MVC, ASP. NET Core, and Angular professionally in tens of projects. besides developing applications I have many experiences in solution design and software architect position as a freelancer and employed developer.</p>
+<h5>One fact (outside of work) about me...</h5>
+<p>I am passionate about Education and Blockchain topics. I have a dream that one day mix them and increase the level of wisdom and awareness of my society. I am very enthusiastic to share anything that I am learned whether to be in technical or other fields. I usually spend my free time study playing ping-pong and teaching programming.</p>
 
-                        <div class="meta mb-1">
-                            <span class="date" >
-                                published <label x-data="app" x-text="daysPassed('2/2/2024 12:00:00 AM &#x2B;00:00')"></label> days ago
-                            </span>
-                            <span class="time">5 min read</span>
-                            <span class="comment"><a href="#">8 comments</a></span>
-                        </div>
-                        <div class="intro">If you want to save a set of records in a relational database so that be reorder-able,  you will encounter some challenges. I have shared my solution to these challenges.</div>
-                        <a class="more-link" href="/post/user-defined-ordered-list">Read more &rarr;</a>
-                    </div><!--//media-body-->
-                </div><!--//media-->
-            </div>
-            <div class="item mb-5">
-                <div class="media">
-                    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="/images/ddd-cover.jpeg" alt="image">
-                    <div class="media-body">
-                        <h3 class="title mb-1"><a href="/post/when-and-why-should-we-use-ddd">When and why should we use DDD?</a></h3>
-
-                        <div class="meta mb-1">
-                            <span class="date" >
-                                published <label x-data="app" x-text="daysPassed('2/2/2024 12:00:00 AM &#x2B;00:00')"></label> days ago
-                            </span>
-                            <span class="time">5 min read</span>
-                            <span class="comment"><a href="#">8 comments</a></span>
-                        </div>
-                        <div class="intro">in the world of software development is talked about DDD more than using it practically. We want to see when we should use DDD!</div>
-                        <a class="more-link" href="/post/when-and-why-should-we-use-ddd">Read more &rarr;</a>
-                    </div><!--//media-body-->
-                </div><!--//media-->
-            </div>
-
-        <nav class="blog-nav nav nav-justified my-5">
-            <a class="nav-link-prev nav-item nav-link d-none rounded-left" href="#">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-            <a class="nav-link-next nav-item nav-link rounded" href="/post">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
-        </nav>
-    </div>
-</section>
-<script>
-    window.model = {"Home":{"Heading":"My Perspective","Introduction":"\u0022If you can\u0027t explain it simply, you don\u0027t understand it well enough.\u0022 - Albert Einstein"},"Posts":[{"Markdown":null,"Post":{"PostId":"user-defined-ordered-list","Title":"User defined ordered list","CoverImage":{"FilePath":"/images/reorder-list.png"},"Description":"If you want to save a set of records in a relational database so that be reorder-able,  you will encounter some challenges. I have shared my solution to these challenges.","PublishDate":"2024-02-02T00:00:00+00:00","Markdown":{"FilePath":"markdowns/user-defined-ordered-list.md"}},"ModelKey":"user-defined-ordered-list"},{"Markdown":null,"Post":{"PostId":"when-and-why-should-we-use-ddd","Title":"When and why should we use DDD?","CoverImage":{"FilePath":"/images/ddd-cover.jpeg"},"Description":"in the world of software development is talked about DDD more than using it practically. We want to see when we should use DDD!","PublishDate":"2024-02-02T00:00:00+00:00","Markdown":{"FilePath":"markdowns/when-and-why-should-we-use-ddd.md"}},"ModelKey":"when-and-why-should-we-use-ddd"}]};
-
-    document.addEventListener('alpine:init', () => {
-        //console.log(Alpine);
-        Alpine.data('app', () => ({
-            daysPassed(dateString) {
-                // Handle potential invalid date strings
-                return daysPassed(dateString);
-            }
-        }))
-    })
-</script>
+        </div>
+	</div>
+</article><!--//about-section-->
 
 
     </div>

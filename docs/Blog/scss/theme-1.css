@@ -5836,7 +5836,7 @@ button.bg-dark:focus {
   display: inline-block !important;
 }
 
-.d-block {
+.d-block, .markdown img {
   display: block !important;
 }
 
@@ -7236,7 +7236,8 @@ button.bg-dark:focus {
 }
 
 .mr-auto,
-.mx-auto {
+.mx-auto,
+.markdown img {
   margin-right: auto !important;
 }
 
@@ -7246,7 +7247,8 @@ button.bg-dark:focus {
 }
 
 .ml-auto,
-.mx-auto {
+.mx-auto,
+.markdown img {
   margin-left: auto !important;
 }
 
@@ -9313,118 +9315,21 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
   }
 }
-/* ======= Configure Style (Remove in production) ======= */
-/* Demo theme colour variables */
-body {
-  overflow-x: hidden;
+.markdown table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #292929;
 }
-
-.config-trigger {
-  position: absolute;
-  top: 30px;
-  left: -36px;
-  width: 36px;
-  height: 36px;
-  background: #223142;
-  color: #fff;
-  text-align: center;
-  border-radius: 4px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  text-decoration: none;
+.markdown table th,
+.markdown table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid darkgray;
 }
-.config-trigger:hover {
-  background: #111820;
-  text-decoration: none;
+.markdown table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid darkgray;
 }
-.config-trigger:hover .fa-cog {
-  color: #fff;
-}
-.config-trigger .fa-cog {
-  font-size: 1.25rem;
-  display: block;
-  color: #fff;
-}
-
-.config-panel {
-  position: absolute;
-  top: 50px;
-  right: -190px;
-  z-index: 30;
-  width: 190px;
-}
-.config-panel .panel-inner {
-  position: relative;
-  background: #223142;
-  color: #fff;
-  padding: 15px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.config-panel .panel-title {
-  font-weight: 600;
-  margin-bottom: 10px;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #fff;
-}
-.config-panel label {
-  color: #fff;
-}
-.config-panel #color-options {
-  margin-bottom: 0px;
-}
-.config-panel #color-options li a {
-  display: block;
-  width: 28px;
-  height: 28px;
-  border: 2px solid transparent;
-  margin-top: 5px;
-}
-.config-panel #color-options li a:hover {
-  -webkit-opacity: 0.9;
-  -moz-opacity: 0.9;
-  opacity: 0.9;
-  border: 2px solid rgba(255, 255, 255, 0.9);
-}
-.config-panel #color-options li.list-inline-item {
-  margin-right: 5px;
-}
-.config-panel #color-options li.active a {
-  border: 2px solid #fff;
-}
-.config-panel #color-options li.theme-1 a {
-  background: #5FCB71;
-}
-.config-panel #color-options li.theme-2 a {
-  background-color: #5BC3D5;
-}
-.config-panel #color-options li.theme-3 a {
-  background-color: #3B7EEB;
-}
-.config-panel #color-options li.theme-4 a {
-  background-color: #5ECCA9;
-}
-.config-panel #color-options li.theme-5 a {
-  background-color: #EEA73B;
-}
-.config-panel #color-options li.theme-6 a {
-  background-color: #5469C9;
-}
-.config-panel #color-options li.theme-7 a {
-  background-color: #5D6BA7;
-}
-.config-panel #color-options li.theme-8 a {
-  background-color: #6C51A4;
-}
-.config-panel .close {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  color: #fff;
-}
-.config-panel .close .fa {
-  color: #fff;
+.markdown table tbody + tbody {
+  border-top: 2px solid darkgray;
 }
