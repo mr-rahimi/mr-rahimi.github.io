@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap 4 Blog Template For Developers</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+            integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7"
+            crossorigin="anonymous"></script>
+    <script src="https://giscus.app/client.js"
+            data-repo="mr-rahimi/mr-rahimi.github.io"
+            data-repo-id="R_kgDOKYbSDg"
+            data-category="General"
+            data-category-id="DIC_kwDOKYbSDs4CfxCV"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="1"
+            data-input-position="top"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="/Blog/scss/theme-1.min.css">
+
+</head>
+
+<body>
+
+    <header b-03d6ragzky class="header text-center">
+        <h1 b-03d6ragzky class="blog-name pt-lg-4 mb-0"><a b-03d6ragzky href="/">Mo Rahimi</a></h1>
+
+        <nav b-03d6ragzky class="navbar navbar-expand-lg navbar-dark">
+
+            <button b-03d6ragzky class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span b-03d6ragzky class="navbar-toggler-icon"></span>
+            </button>
+
+            <div b-03d6ragzky id="navigation" class="collapse navbar-collapse flex-column">
+                <div b-03d6ragzky class="profile-section pt-3 pt-lg-0">
+
+                    <div b-03d6ragzky class="bio mb-3">
+                        a place for sharing my thought and comments in software engineering and lived experience<br b-03d6ragzky>
+                        <a b-03d6ragzky href="/about">Find out more about me</a>
+                    </div><!--//bio-->
+                    <hr b-03d6ragzky>
+                </div><!--//profile-section-->
+
+                <ul b-03d6ragzky class="navbar-nav flex-column text-left" x-data="sidebar">
+                    <li b-03d6ragzky class="nav-item " :class="{ 'active':isActive() }">
+                        <a b-03d6ragzky class="nav-link" href="/">
+                            <i b-03d6ragzky class="fas fa-home fa-fw mr-2"></i>Blog Home
+                            <span b-03d6ragzky class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li b-03d6ragzky class="nav-item" :class="{ 'active':isActive() }">
+                        <a b-03d6ragzky class="nav-link" href="/post">
+                            <i b-03d6ragzky class="fas fa-bookmark fa-fw mr-2"></i>Blog Post
+                        </a>
+                    </li>
+                    <li b-03d6ragzky class="nav-item" :class="{ 'active':isActive() }">
+                        <a b-03d6ragzky class="nav-link" href="/about">
+                            <i b-03d6ragzky class="fas fa-user fa-fw mr-2"></i>About Me
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+    <div b-03d6ragzky class="main-wrapper" id="app">
+        
+<article class="blog-post px-3 py-5 p-md-5">
+    <div class="container">
+        <header class="blog-post-header">
+            <h2 class="title mb-2">User defined ordered list</h2>
+            <div class="meta mb-3">
+                <span class="date">
+                    published <label x-data="app" x-text="daysPassed('2/2/2024 12:00:00 AM &#x2B;00:00')"></label> days ago
+                </span>
+            </div>
+            <div class="bg-light mt-3 mb-5">
+                <img src="/images/reorder-list.png" class="mx-auto d-block" />
+            </div>
+        </header>
+
+        <div class="blog-post-body">
+            <div class="markdown">
+                <h3>user-defined-ordered-list</h3>
+<p>imagine you have a set of categories, and every category has a set of products.</p>
+<ul>
+<li><p>the products of every category must be saved and retrieved ordered.</p>
+</li>
+<li><p>the order of every product set will be determined by the user frequently.</p>
+</li>
+</ul>
+<h3>Solutions</h3>
+<ol>
+<li>Linked List: Implement a linked list of products by adding a next_product field to the product table.</li>
+<li>Serialize Ordered Ids: serialize ordered ids to a comma-separated text, JSON, or  XML an apply the order of every set to that serialized content.</li>
+<li>Rank Field: add an order_index field to product table which keeps the rank of product in its category.</li>
+</ol>
+<h3>1. Linked List</h3>
+<p>The main benefit of a linked list is that the items can easily be inserted or removed without reallocation or reorganization of the entire structure.
+in this approach add, insert and delete of the record is efficient but read a filtered and sorted list is not optimal. it's because of the function of the relational database. a relational database is not proper for linked data.</p>
+<ul>
+<li><em>Change(efficient)</em></li>
+<li><em>Read(inefficient)</em></li>
+</ul>
+<h3>2. Serialized Order Ids</h3>
+<p>in this approach, we store the order of the list into a none relational database. it causes to change the order of list become easy because we eliminate the limitation of the relational database. imagine you have a list of product ids contains 1,2,3,4,5,6 you can save different order of them such a form:</p>
+<p>&quot;4,2,1,3,5,6&quot;</p>
+<p>every time you want to change or read the products list you need to deserialize this data. you can serialize the ordered product as XML, JSON, or any mechanism you are able to serialize and deserialize a list.</p>
+<p>this approach takes a lot of resources both memory and processor for a large list because you must process, serialize and deserialize lists in the application memory and application processor. but should be mentioned that this method could be a good choice for small lists.</p>
+<ul>
+<li><em>Change(inefficient)</em></li>
+<li><em>Read(inefficient)</em></li>
+</ul>
+<h3>3. Rank Field</h3>
+<p>In this approach, you are saving the position of the item based on the order. The ID of the item never changes, but you can update the index to match the order that you want. the complex part of this approach is in the index update algorithm. so change the order of the list could be inefficient instead retrieve the list is so performant for the relational database.</p>
+<ul>
+<li><em>Change(inefficient)</em></li>
+<li><em>Read(efficient)</em></li>
+</ul>
+<p>there are a variety of methods to update the order index, for example, I can name these methods:</p>
+<ol>
+<li>leave a “gap” between the indexes</li>
+<li>Use decimal index and use float part of the index</li>
+<li>Regenerate the order field after any change.</li>
+<li>Get Order numbers directly from the client.</li>
+<li>USe Fraction Algorithm to generate indexes.</li>
+</ol>
+<p>I suggest studying the following article regarding the True Fractions algorithm.</p>
+<p><a href="https://begriffs.com/posts/2018-03-20-user-defined-order.html">User-defined Order in SQL</a>.</p>
+<p>I have used the Fraction Algorithm in my projects and  I have implemented an example of the Rank Field approach by Fraction Algorithm. I have used the EF Core and InMemory Database in this code sample. I recommend you take a look at this code sample in following link:</p>
+<p><a href="https://dotnetfiddle.net/Myhoap">Rank Field By Fraction Algorithm</a></p>
+
+            </div>
+        </div>
+        <div class="giscus" id="comments">
+        </div>
+    </div><!--//container-->
+</article>
+<script>
+    document.addEventListener('alpine:init', () => {
+        //console.log(Alpine);
+        Alpine.data('app', () => ({
+            daysPassed(dateString) {
+                // Handle potential invalid date strings
+                return daysPassed(dateString);
+            }
+        }))
+    });
+</script>
+
+
+    </div>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('sidebar', () => ({
+                isActive() {
+                    var link = this.$el.querySelector("a");
+                    var href = link.getAttribute("href");
+                    currentPath = window.location.pathname;
+                    return currentPath == href;
+                }
+            }))
+        });
+    </script>
+    <script src="/Blog/plugins/jquery-3.3.1.min.js"></script>
+    <script src="/Blog/plugins/popper.min.js"></script>
+    <script src="/Blog/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="/Blog/js/demo/style-switcher.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+    <script src="/Blog/js/blog.js"></script>
+
+</body>
+</html>
+
