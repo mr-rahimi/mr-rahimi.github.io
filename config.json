@@ -1,6 +1,7 @@
 {
   "copyToOutput": [
-    "images/*.*"
+    "images/*.*",
+	"googlefb54269b722228cd.html"
   ],
   "outputPath": "docs",
   "modules": [
