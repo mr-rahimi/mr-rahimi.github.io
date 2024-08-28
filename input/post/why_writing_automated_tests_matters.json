@@ -1,0 +1,12 @@
+{
+  "PostId": "why-writing-automated-tests-matters",
+  "title": "Why writing automated tests matters  in software development",
+  "coverImage": {
+    "filePath": "/images/why_writing_automated_tests_matters/automated_test.png"
+  },
+  "description": "One of the peculiar tasks that programmers undertake is writing tests for the code they've written themselves. While it can sometimes be clear to the programmer what the output of their code should be. In this article, we examine the issue from various perspectives, aiming to make the idea of writing tests more palatable.",
+  "publishDate": "2024-08-28T00:00:00Z",
+  "Markdown": {
+    "filePath": "markdowns/Why_writing_automated_tests_matters.md"
+  }
+}

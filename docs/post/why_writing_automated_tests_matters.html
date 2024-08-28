@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Why writing automated tests matters  in software development | Mo Rahimi-</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="One of the peculiar tasks that programmers undertake is writing tests for the code they&#x27;ve written themselves. While it can sometimes be clear to the programmer what the output of their code should be. In this article, we examine the issue from various perspectives, aiming to make the idea of writing tests more palatable.">
+
+    <meta name="author" content="Mo Rahimi">
+    <link rel="shortcut icon" href="/Blog/images/logo.svg">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+            integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7"
+            crossorigin="anonymous"></script>
+    <script src="https://giscus.app/client.js"
+            data-repo="mr-rahimi/mr-rahimi.github.io"
+            data-repo-id="R_kgDOKYbSDg"
+            data-category="General"
+            data-category-id="DIC_kwDOKYbSDs4CfxCV"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="1"
+            data-input-position="top"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="/Blog/scss/theme-1.min.css">
+
+</head>
+
+<body>
+
+    <header b-03d6ragzky class="header text-center">
+        <h1 b-03d6ragzky class="blog-name pt-lg-4 mb-0"><a b-03d6ragzky href="/">Mo Rahimi</a></h1>
+
+        <nav b-03d6ragzky class="navbar navbar-expand-lg navbar-dark">
+
+            <button b-03d6ragzky class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span b-03d6ragzky class="navbar-toggler-icon"></span>
+            </button>
+
+            <div b-03d6ragzky id="navigation" class="collapse navbar-collapse flex-column">
+                <div b-03d6ragzky class="profile-section pt-3 pt-lg-0">
+
+                    <div b-03d6ragzky class="bio mb-3">
+                        My full name is Mohammad Reza Rahimi. Here is a place for sharing my thought and comments in software engineering and lived experience<br b-03d6ragzky>
+                        <a b-03d6ragzky href="/about">Find out more about me</a>
+                    </div><!--//bio-->
+                    <hr b-03d6ragzky>
+                </div><!--//profile-section-->
+
+                <ul b-03d6ragzky class="navbar-nav flex-column text-left" x-data="sidebar">
+                    <li b-03d6ragzky class="nav-item " :class="{ 'active':isActive() }">
+                        <a b-03d6ragzky class="nav-link" href="/">
+                            <i b-03d6ragzky class="fas fa-home fa-fw mr-2"></i>Home
+                            <span b-03d6ragzky class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li b-03d6ragzky class="nav-item" :class="{ 'active':isActive() }">
+                        <a b-03d6ragzky class="nav-link" href="/post">
+                            <i b-03d6ragzky class="fas fa-bookmark fa-fw mr-2"></i>Posts
+                        </a>
+                    </li>
+                    <li b-03d6ragzky class="nav-item" :class="{ 'active':isActive() }">
+                        <a b-03d6ragzky class="nav-link" href="/about">
+                            <i b-03d6ragzky class="fas fa-user fa-fw mr-2"></i>About Me
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+    <div b-03d6ragzky class="main-wrapper" id="app">
+        <article class="blog-post px-3 py-5 p-md-5">
+    <div class="container">
+        <header class="blog-post-header">
+            <h2 class="title mb-2">Why writing automated tests matters  in software development</h2>
+            <div class="meta mb-3">
+                <span class="date">
+                    published <label x-data="app" x-text="daysPassed('8/28/2024 12:00:00 AM &#x2B;00:00')"></label> days ago
+                </span>
+            </div>
+            <div class="bg-light mt-3 mb-5">
+                <img src="/images/why_writing_automated_tests_matters/automated_test.png" class="mx-auto d-block" />
+            </div>
+        </header>
+
+        <div class="blog-post-body">
+            <div class="markdown">
+                <h1>Preface</h1>
+<p>One of the peculiar tasks that programmers undertake is writing tests for the code they've written themselves. While it can sometimes be clear to the programmer what the output of their code should be. In this article, we examine the issue from various perspectives, aiming to make the idea of writing tests more palatable.</p>
+<h1>Using of a metaphor - Science and Mathematics</h1>
+<p>The terms &quot;science&quot; and &quot;mathematics&quot; refer to distinct but related fields of study, each with its own set of principles, methods, and applications.Science is a systematic approach to understanding the natural world. It seeks to explain phenomena through observation, experimentation, and analysis, and uses a variety of tools and techniques to test hypotheses and develop theories. For instance relativity is a scientific theory, specifically, developed by Albert Einstein.</p>
+<p>Mathematics, on the other hand, is a discipline that deals with abstract concepts such as numbers, quantities, structures, and patterns. It is concerned with logical reasoning and the development of precise models and algorithms. One example of a mathematical theory is the theory of calculus, which deals with the study of continuous change and is essential for understanding many fields such as physics, engineering, and economics.</p>
+<p>Briefly mathematical theorems are proved by logical reasoning while scientific theories are proved by experiment. First one tries to establish the correctness of a relationship by abstract materials but second category(scientific theories) try to establish the correctness by real substances. Although the distinction may seem minor and philosophical, it is  so crucial.
+<a href="/images/Why_writing_automated_tests_matters%C2%A0_in_software_development/mathscience.gif"><img src="/images/why_writing_automated_tests_matters/mathscience.gif" alt="image" /></a></p>
+<p>Science is concerned with the behavior of matter, including substances that we have yet to fully comprehend and model their behavior. Since we do not have a complete understanding of such substances, it is not possible to provide a definite statement about their behavior. Rather, experiments can only indicate the behavior of a substance under certain conditions. If we can show that something doesn't act the way we thought it would in a certain situation, then what we believed before might not be true. An example of this is Einstein's theory of relativity, which challenged Newton's laws in certain specific circumstances.</p>
+<h1>How is it related to the world of programming?</h1>
+<p><strong>A piece of code is like a substance that needs experimentation, not like a mathematical equation.</strong></p>
+<p>The actual behavior of a piece of code in a real-world environment is influenced by numerous factors, some of which are unknown and cannot be accounted for in the code itself.
+<a href="/images/Why_writing_automated_tests_matters%C2%A0_in_software_development/software_foundation.png"><img src="/images/why_writing_automated_tests_matters/software_foundation.png" alt="image" /></a></p>
+<p>For instance, what can be done in our unit of code if a power failure occurs while the code is executing line 5? The conditions that the code encounters during its execution are countless and not all of them can be predicted or controlled, so it is not possible to consider every possible scenario. In other words, in running software, we are dealing with a real substance, not an abstract substance.Consequently, we understand that it is infeasible to demonstrate conclusively that our code is always correct. Instead, we can only use a scientific method to show that the code is not incorrect in a specific situation. These two perspectives are vastly distinct.It's noteworthy that individuals who are against writing tests often justify their position with the argument that &quot;it's clear that the code is working correctly&quot;. However, it must be recognized that no code is guaranteed to work correctly in all scenarios. The only way to be persuaded to write tests is to accept this fact. If you want to verify that the code only functions properly in a specific situation, it's crucial to create tests for that piece of code to determine if it exhibits the desired behavior in a limited and specific context.</p>
+<h1>How test bring Self-explanatory Code</h1>
+<p>Writing tests binds the code to the requirements for which it was written. Tests state exactly what the code under test is written for. This makes it much easier to develop and maintain the system.</p>
+<p>Think about codes in module X that are utilized in both module A and module B. If a programmer working on module A discovers an issue with module X and resolves it, how can they ensure that module B won't encounter any issues from the new changes? One solution is to re-test the functionality of module B. However, if there are already tests in place for module X, then the new changes should only pass those tests, ensuring the integrity of both modules.</p>
+<p><a href="/images/Why_writing_automated_tests_matters%C2%A0_in_software_development/module_hierarchy.png"><img src="/images/why_writing_automated_tests_matters/module_hierarchy.png" alt="image" /></a></p>
+<p>To put it another way, test cases are the most valuable documentation for code and allow for a quick and efficient evaluation of its function and accuracy.</p>
+<h1>When should we write tests?</h1>
+<p>Think of writing code as creating a new material. As previously stated, it's not possible to anticipate all of the code's behavior. The goal is to ensure that the material is suitable for our needs. To do this, limited tests must be conducted to confirm that the material performs as expected under certain conditions. The creation of these tests necessitates a solid understanding of the requirements and a general comprehension of the code's purpose in fulfilling those requirements.Although our code may fulfill specific and limited requirements, it's possible that it implements a useless feature that is more than what it is supposed to be, or that code structure may not be fit for the requirement. Hence, it's advisable to specify test cases, prior to writing code, what tests it should pass, meaning what tests should be used to verify the code's correctness.</p>
+<p>Designing tests before writing code can be time-consuming, but it allows for a more focused and efficient outcome without additional effort. Furthermore, as we consider the design of the tests, we can better break down the code into smaller pieces, making the tests easier to create. Most importantly, this approach prevents the code from becoming overly general and lacking purpose.</p>
+<p><a href="/images/Why_writing_automated_tests_matters%C2%A0_in_software_development/test_first.png"><img src="/images/why_writing_automated_tests_matters/test_first.png" alt="image" /></a></p>
+<p>The choice between a test-first or test-last approach depends on the specific project conditions. In data-driven projects, where a majority of the code involves storing and retrieving data, the test-first approach becomes less crucial as the structures of the program are already established and the logic of the program is centered around validation of input data.However, in domain-driven programs where the logic is more complex and diverse, the benefits of a test-first approach become more prominent. The behaviors of the domain layer models that contain the application logic are the best place to test the logic, and they should pass our intended tests accurately.</p>
+<h1>How should tests be designed?</h1>
+<p>The breadth of software that is included in the automated tests impacts the speed and complexity of the tests. The scope of testing can be as narrow as evaluating a single function (known as a unit test) or as broad as assessing the overall performance of the system by replicating user interactions (known as end-to-end testing or E2E).</p>
+<p><a href="/images/Why_writing_automated_tests_matters%C2%A0_in_software_development/test_layers.png"><img src="/images/why_writing_automated_tests_matters/test_layers.png" alt="image" /></a></p>
+<p>Unit tests have a narrower scope and do not rely on actual software dependencies. Instead, these dependencies are often simulated, which enables faster implementation and execution of the tests. However, a larger number of unit tests are needed to cover a wide range of scenarios. On the other hand, when tests cover a broader range, they require real dependencies of the program, such as databases or web services, which results in slower implementation and execution of the tests. Despite the slower speed, the advantage of these tests is that they cover a wider range of scenarios.</p>
+<p>It is crucial to strike the right balance between the speed and quantity of tests when designing them. The guiding principle is to ensure that the unit tests evaluate a significant portion of the system's functionality, wherever possible. If the software does not allow this possibility, then it is advisable to re-evaluate the structure of the software. The design of the software architecture can have a direct influence on the precision of the tests, which highlights the importance of adopting a test-first approach.</p>
+<h1>Conclusion</h1>
+<p>If we want to summarize the whole article in one phrase, those phrases are &quot;no piece of code always works correctly&quot;.</p>
+<p>Our code must be designed to work correctly in specific situations and environments. It is essential to determine the conditions under which our code will perform as intended.</p>
+<p>Writing tests are the best documentation and explanation for extending and maintaining the code.</p>
+<p>In some cases, creating test cases before writing the code helps to concentrate on the core issue and steer clear of unproductive matters.</p>
+<p>Maturity of software functionality must be tested by unit-tests as much as possible. To do this the structure of the software should let you put business logic in units that are not tightly dependent on real software dependencies.</p>
+
+            </div>
+        </div>
+        <div class="giscus" id="comments">
+        </div>
+    </div><!--//container-->
+</article>
+<script>
+    document.addEventListener('alpine:init', () => {
+        //console.log(Alpine);
+        Alpine.data('app', () => ({
+            daysPassed(dateString) {
+                // Handle potential invalid date strings
+                return daysPassed(dateString);
+            }
+        }))
+    });
+</script>
+
+
+    </div>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('sidebar', () => ({
+                isActive() {
+                    var link = this.$el.querySelector("a");
+                    var href = link.getAttribute("href");
+                    currentPath = window.location.pathname;
+                    return currentPath == href;
+                }
+            }))
+        });
+    </script>
+    <script src="/Blog/plugins/jquery-3.3.1.min.js"></script>
+    <script src="/Blog/plugins/popper.min.js"></script>
+    <script src="/Blog/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="/Blog/js/demo/style-switcher.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+    <script src="/Blog/js/blog.js"></script>
+
+</body>
+</html>
+
