@@ -59,5 +59,5 @@ function generateDescription(years, months, days) {
         description += `${days} ${days === 1 ? 'day' : 'days'} `;
     }
 
-    return description.trim() || "Today";
+    return description ? description.trim() + " days ago" : "Today";
 }
